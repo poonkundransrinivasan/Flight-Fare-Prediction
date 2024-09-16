@@ -13,8 +13,11 @@ This is a Flask web application that predicts flight fares based on various inpu
 
 ## Project Structure
 
-flight-fare-prediction/ │ ├── templates/ │ └── home.html # The main HTML file to display the form and result ├── flight_predict_rf.pkl # Pre-trained Random Forest model for flight fare prediction ├── app.py # Main application file └── README.md # Readme file
-
+- **templates/home.html**: Front-end HTML template for user interaction.
+- **static/styles.css**: CSS file for styling the user interface (if any styling is applied).
+- **flight_predict_rf.pkl**: The trained machine learning model stored using `pickle` for making flight fare predictions.
+- **app.py**: Main Python script that contains the Flask web server and the logic for handling user input and generating predictions.
+- **README.md**: Documentation of the project, including usage instructions, technologies used, and project structure.
 
 ## Prerequisites
 
