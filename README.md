@@ -1,43 +1,74 @@
-Flight Fare Prediction
-This project predicts flight fares based on various factors such as departure and arrival times, airline, source, destination, total stops, and flight duration. The prediction is powered by a machine learning model built using Random Forest, which is integrated into a Flask web application to allow users to input flight details and receive fare predictions.
+# Flight Fare Prediction
 
-Features
-Machine Learning Model: A pre-trained Random Forest model (flight_predict_rf.pkl) predicts flight fares.
-Web Application: A Flask-based web app with an intuitive form where users input flight details such as date of journey, airline, number of stops, etc.
-Real-time Prediction: Once the user submits the flight information, the model predicts the fare and displays it on the web page.
+This is a Flask web application that predicts flight fares based on various input parameters such as date of journey, airline, source, destination, number of stops, and travel duration. The prediction is done using a pre-trained Random Forest model (`flight_predict_rf.pkl`).
 
-Project Structure
-.
-├── app.py                 # Flask application code
-├── flight_predict_rf.pkl   # Pre-trained Random Forest model
-├── templates
-│   └── home.html          # Front-end HTML for input and output
-├── static
-│   └── style.css          # CSS for styling the web page (optional)
-└── README.md              # Project documentation
+## Table of Contents
+- [Project Structure](#project-structure)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [How to Run the Application](#how-to-run-the-application)
+- [Usage](#usage)
+- [Technologies Used](#technologies-used)
+- [Model Description](#model-description)
 
-Installation
-To run the project locally, follow these steps:
+## Project Structure
 
-Prerequisites
-Python 3.x
-Flask
-Pandas
-Scikit-learn
-Pickle
+flight-fare-prediction/ │ ├── templates/ │ └── home.html # The main HTML file to display the form and result ├── flight_predict_rf.pkl # Pre-trained Random Forest model for flight fare prediction ├── app.py # Main application file └── README.md # Readme file
 
-Input Format
-Date of Journey: The date and time of departure (format: YYYY-MM-DDTHH:MM).
-Arrival Time: The expected arrival time of the flight.
-Total Stops: Number of stops the flight makes (0 for direct flights).
-Airline: Select the airline from the dropdown options.
-Source: The city of departure.
-Destination: The city of arrival.
-Example
-Input: Departure from Delhi on 2024-09-20T18:30, arrival at 21:30, airline: IndiGo, no stops.
-Output: Your Flight price is Rs. 4000
 
-Future Improvements
-Include additional features like flight class and demand-based pricing.
-Improve the UI with a responsive design.
-Add error handling for invalid inputs.
+## Prerequisites
+
+- Python 3.x
+- Flask
+- Pandas
+- Scikit-learn
+- Pickle
+
+Make sure you have the necessary libraries installed by running:
+
+```bash
+pip install Flask pandas scikit-learn
+```
+
+## Installation
+  - Clone the repository:
+```bash
+git clone https://github.com/yourusername/flight-fare-prediction.git
+```
+  - Navigate to the project directory:
+```bash
+cd flight-fare-prediction
+```
+
+## How to Run the Application
+  - Make sure your flight_predict_rf.pkl model is in the root folder.
+  - Run the Flask app:
+```bash
+python app.py
+```
+  - Open your browser and navigate to:
+    [http://127.0.0.1:5000/](http://127.0.0.1:5000/
+    ]
+
+## Usage
+1. Enter the date and time of your journey and arrival.
+2. Select the number of stops, airline, source, and destination from the dropdown lists.
+3. Click the **Predict** button to see the predicted flight fare.
+
+## Technologies Used
+- **Flask**: Web framework to run the web application.
+- **Scikit-learn**: Machine learning library used for training the Random Forest model.
+- **Pandas**: Used for data manipulation and handling datetime operations.
+- **Pickle**: To load the trained model for prediction.
+
+## Model Description
+The Random Forest model is trained using flight fare data, and the features used for prediction include:
+- Date of journey (day and month)
+- Departure and arrival time
+- Duration of the flight
+- Number of stops
+- Airline
+- Source and destination cities
+
+The model predicts the price of a flight based on these input features.
+
