@@ -36,7 +36,7 @@ pip install Flask pandas scikit-learn
 ## Installation
   - Clone the repository:
 ```bash
-git clone https://github.com/yourusername/flight-fare-prediction.git
+git clone https://github.com/poonkundransrinivasan/flight-fare-prediction.git
 ```
   - Navigate to the project directory:
 ```bash
