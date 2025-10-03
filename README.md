@@ -2,6 +2,8 @@
 
 This is a Flask web application that predicts flight fares based on various input parameters such as date of journey, airline, source, destination, number of stops, and travel duration. The prediction is done using a pre-trained Random Forest model (`flight_predict_rf.pkl`).
 
+Learn how the model was trained: https://github.com/poonkundransrinivasan/Flight-Fare-Prediction-Model-Creation
+
 ## Table of Contents
 - [Project Structure](#project-structure)
 - [Prerequisites](#prerequisites)
